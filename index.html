@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tadas Zaronskis</title>
+  <meta name="description" content="Tadas Zaronskis — research, translation, poetry, other." />
+
+  <style>
+    :root{
+      /* sampled to match the warm off-white tone of your reference image */
+      --paper:#faf9f4;
+      --ink:#171717;
+      --muted:#6f6a62;
+      --faint:#b5afa5;
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{
+      margin:0;
+      min-height:100%;
+      background:var(--paper);
+      color:var(--ink);
+    }
+
+    body{
+      min-height:100vh;
+      font-family:"Courier New", Courier, monospace;
+      letter-spacing:.01em;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .page{
+      min-height:100vh;
+      display:grid;
+      grid-template-rows:auto 1fr auto;
+      padding:28px 36px 26px;
+    }
+
+    .topbar,.footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+    }
+
+    .topbar{color:var(--muted)}
+    .langs{display:flex;gap:14px}
+
+    .langs a{
+      opacity:.55;
+      transition:opacity .15s ease, transform .15s ease;
+    }
+
+    .langs a:hover,.langs a.active{
+      opacity:1;
+      transform:translateY(-1px);
+    }
+
+    .mark{color:var(--faint)}
+
+    main{
+      display:grid;
+      place-items:center;
+      padding:36px 0 44px;
+    }
+
+    .hero{
+      width:min(980px,100%);
+      text-align:center;
+      position:relative;
+    }
+
+    .name{
+      margin:0;
+      font-size:clamp(26px,3.35vw,43px);
+      line-height:1;
+      font-weight:400;
+      letter-spacing:-.035em;
+      text-transform:lowercase;
+    }
+
+    .email{
+      margin-top:10px;
+      font-size:11px;
+      font-weight:400;
+      color:var(--muted);
+      letter-spacing:.04em;
+    }
+
+    .nav{
+      margin-top:28px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px 23px;
+      font-size:13px;
+      text-transform:lowercase;
+      color:var(--muted);
+    }
+
+    .nav a{
+      position:relative;
+      padding:4px 0;
+      transition:color .15s ease;
+    }
+
+    .nav a:not(:last-child)::after{
+      content:"·";
+      position:absolute;
+      right:-15px;
+      color:var(--faint);
+      pointer-events:none;
+    }
+
+    .nav a:hover{
+      color:var(--ink);
+    }
+
+    .nav a span{
+      position:relative;
+    }
+
+    .nav a span::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:100%;
+      bottom:-3px;
+      height:1px;
+      background:var(--ink);
+      transition:right .18s ease;
+    }
+
+    .nav a:hover span::after{
+      right:0;
+    }
+
+    .plane-wrap{
+      margin:54px auto 20px;
+      width:max-content;
+      max-width:100%;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .plane {
+      margin: 0;
+      color: #111;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 8px;
+      font-weight: 600;
+      line-height: 0.95;
+      letter-spacing: 0;
+      white-space: pre;
+      text-align: left;
+    }
+
+    .plane-wrap:hover .plane{
+      transform:translateY(-2px) rotate(-.2deg);
+    }
+
+    .side-symbol{
+      position:absolute;
+      color:var(--faint);
+      font-size:18px;
+      pointer-events:none;
+    }
+
+    .s1{left:5%;top:34%}
+    .s2{right:6%;top:43%}
+    .s3{left:13%;bottom:7%;font-size:11px}
+    .s4{right:13%;bottom:5%;font-size:11px}
+
+    .footer{
+      color:var(--faint);
+      font-size:10px;
+      position:relative;
+      min-height:12px;
+    }
+
+    .footer .center{
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      letter-spacing:.18em;
+    }
+
+    .footer .right{
+      margin-left:auto;
+    }
+
+    @media (max-width:700px){
+      .page{padding:22px 18px 20px}
+      .topbar,.footer{font-size:10px}
+      .nav{gap:9px 19px;line-height:1.6}
+      .nav a:not(:last-child)::after{right:-12px}
+      .plane-wrap{margin-top:42px}
+      .plane{font-size:6.2px}
+      .s1,.s2,.s3,.s4{display:none}
+      .footer .center{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="mark">✦ personal archive / ongoing</div>
+      <nav class="langs" aria-label="Language">
+        <a href="#" class="active">EN</a>
+        <a href="#">LT</a>
+        <a href="#">FR</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="side-symbol s1">✶</div>
+        <div class="side-symbol s2">·</div>
+        <div class="side-symbol s3">+ + +</div>
+        <div class="side-symbol s4">° ° °</div>
+
+        <h1 class="name">tadas zaronskis</h1>
+        <div class="email">tadas@zaronskis.com</div>
+
+        <nav class="nav" aria-label="Main">
+          <a href="#"><span>research</span></a>
+          <a href="#"><span>translation</span></a>
+          <a href="#"><span>poetry</span></a>
+          <a href="#"><span>other</span></a>
+        </nav>
+
+        <div class="plane-wrap" aria-label="ASCII art Piper Cub airplane">
+<pre class="plane">
+                                                                                                          
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                               .::.                                                                                                                             
+                           .+@@@@-%@@*.                                                                             .:-=+****+=:.                               
+                          *@#:.@@% -%@@*                                                          ..:-=+*#%@@@@@@%##++--:..  .:-*%@@*:                          
+                        :@*   =@@@.  :@@%                                        ..:-=+*#%@@@@@%%#*+=-:..                           :*@@+.                      
+                       :@:    +% ..   .%@#                      .:--=*#%@@@@@@%##*=-::..         ..:--==+*#%%@@@@@@@@@@@@@#-.           =%@+.                   
+                      .%.     +*       .@@=:-==++**#%%%@@@@@@%#*+--:..     ..::-=+**#%%@@@@@@@@@*.%@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*-.       .+@%:                 
+        .:::--=+***##%%@@@@@%#%%**++==- =@%...        =#%@@@#+#@@. .+%@@@@@@@@@@@@@@@@@@@@@@@@@:=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#+-:. :%@-               
+    :#%+:.               .  ..=*        .@@....   .:@@@@%=.  :@% -@@@#=: .:=*%@@@@@@@@@@@@@@@*.%@@@@@@@@@@@@@*.*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#**=.             
+   .%%%%%%%#%@@@@@@@@+#*=%-. .   .#.    .@@...::--==**%@@@@*%@* +@@@@@@#  =@#+:. .+@@@@@@@@@:=@@@@@@@@@@@@#.+@@@@@@@@@@@@@%.    .=@#.:#@@@*.                    
+            .-+#@@@@@-%@*+@@@@@%%%@#    .@@                 -=.#@+%@@@@@%@@%-@@@=.*. +@@@@#.%@@@@@@@@@@%-=@%##*+==-:...         *@*    %@@@=                    
+                    .*-+*#%%@@@@#-%*    .@%                   %@.    @@%-=@%@@@@* @@@:.-@:=@%::..  +%=-%#:                     #@=    -@@@@=                    
+                     *     .@@%#@@-  +  :@*                  .@%     @@@-=##%@@@# @%=..#.%@%:   -%+:%%-                      .%@-     #@@@@=                    
+                     =:     -@%.     %# #@.                  :@@@#=-@@= .:= @@@@%    .-=@*.:%@%*:#@=.                       .%@:     :@@@@@=                    
+                     .*     #@@%:###==:-@*.                  -@+.+@@@:.%@= #@@@*    ..%@...+#:*@%@@*:                      -@%.      *@@@@@=                    
+                      --  .:@*.#@@@@@=:@@@%@@#=.            .=@@@=#:*+:*%##*@%.     =@*.=%:+@*.   .=%@@*.                 =@#.      .%@@@@@=                    
+                       +: :@@-   -#@--@%+-#@@%%@@@%+:      ::*%=*%@@@#@%=.=@:      %@=@-=%#:.         .=%@%=.            *@*        =@@@@@@=                    
+                        -@@@#      .%%+%@@%%@%%@@%%@@@%%+:*@.#%    .. .:=**    -:=%%+-%@-.   ..  .     ....+%@%=.      :%@=         #@@@@@@=                    
+                         .+#:.  .=@%-.  ..:*@%+=#%%@%@%%@%@%.%%+-:.. . .... .##.%#-#%+  .. ......... ......   .+%@@%%@@@#. .       :@@@@@@@=                    
+                             :--:.       .. #:%=%%*::+%%@@@% @@%%@%@@@@%@%#@@:=%#@*.  ........ .. .. .....   .           =%@@@@@@@@@@@@@@@@@@%*-.               
+                                          .--%:...*%@%#+-::@.@-:=+*#%@@@@%%%=%%@@@@%%%@@%**+--..  .. ..... ...           %@@+  ....::::---:-*@@@@@%:            
+                                          .#++  :#*+.:=%:=*%.@@@@@@@%#*=-:.. .::=+*#%%@@@@@@@@@@@@@@@@@%#*+=-:..          :#@@@%#@@@@@@@@@@@@@@@@%*.            
+                                          #:% .*=%.   :+# :%.@*%@   ..:-=+##%@@@@@@@@%%**+=--::--++##%@@@@@@@@@@@@@@@@@%#*+-::-#@@@@@@@@@%=.                    
+                                         --@.:#*+     .*+%#%:@:@.                    .:-=+*#%@@@@@@@@@@@@@%%#####%%%@@@@@@@@@@@@@@@@@@@@@@@:                    
+                                  .+%@@@#**:*=%. ..=+-**:*@@@%@@@@%:                                 ..:-=*##%@@@@@@@@@@@@@@@@@@@@@@@@@@@*:                     
+                               .:@%%@@@@%=@%=+ -*-*#: .:@@*.%@@@@@@@@.                                                .:-=+*#%@@@@%*=:                          
+                               =@:%@@@@@%@+@%=*#-.    -@@..@@@%::-#@@@.                                                                                         
+                              .@-=@@@#+@@@@@@@        %@: #@@+.@@%@@@@%                                                                                         
+                              :@.=@@@=*@@@@@@@:      .@@  %@@.-@@+#@@@@                                                                                         
+                              .@@%@@@@:..=@@@@.       #@:+=@@% %@@@@@@*                                                                                         
+                               :@@@@@@@@@@@@@+        .@@@@@@@@%*@@@@%                                                                                          
+                                .%@@@@@@@@@@-          .+@@@@@@@@@@@=                                                                                           
+                                  .=#@@@%*:               :*%@@@%+.                                                                                             
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+
+</pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="center">zaronskis.com</div>
+      <div class="right">© T.Z.</div>
+    </footer>
+  </div>
+</body>
+</html>
